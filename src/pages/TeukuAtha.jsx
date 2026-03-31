@@ -60,6 +60,74 @@ function Navbar() {
   );
 }
 
+const techStack = ['React', 'Javascript', 'Node.js', 'Tailwind'];
+
+function HeroSection() {
+  return (
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 overflow-hidden">
+      <div className="absolute top-20 left-10 w-72 h-72 bg-[#6366f1]/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#a855f7]/10 rounded-full blur-3xl" />
+      <div className="relative z-10 text-center max-w-4xl mx-auto">
+        <motion.h1
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 sm:mb-6"
+        >
+          <span className="text-[#60a5fa]">WEB</span>{' '}
+          <span className="text-white">DEVELOPER</span>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-white/80 text-base sm:text-lg md:text-xl mb-3 sm:mb-4"
+        >
+          Tech Enthusiast / Technology Information Student
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="text-gray-400 text-sm sm:text-base md:text-lg italic mb-8 sm:mb-10"
+        >
+          Create. Connect. Captivate.
+        </motion.p>
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+          {techStack.map((tech) => (
+            <motion.span
+              key={tech}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.4 }}
+              whileHover={{ scale: 1.1, boxShadow: '0 0 20px rgba(99, 102, 241, 0.5)' }}
+              className="inline-block bg-[#6366f1] hover:bg-[#7c3aed] text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-colors cursor-default"
+            >
+              {tech}
+            </motion.span>
+          ))}
+        </div>
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ repeat: Infinity, duration: 1.5, ease: 'easeInOut' }}
+          className="flex flex-col items-center gap-2 cursor-pointer"
+          onClick={() => document.getElementById('tools')?.scrollIntoView({ behavior: 'smooth' })}
+        >
+          <span className="text-gray-400 text-xs">Scroll Down</span>
+          <ChevronDown className="w-5 h-5 text-gray-400" />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
+
 export default function TeukuAtha() {
   return (
     <div
@@ -71,8 +139,8 @@ export default function TeukuAtha() {
       }}
     >
       <Navbar />
-      <main className="flex-1 flex items-center justify-center">
-        <p className="text-gray-400 text-sm">Membuat portofolio</p>
+      <main className="flex-1">
+        <HeroSection />
       </main>
     </div>
   );
