@@ -98,6 +98,11 @@ const GitBranch = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="cur
 const GithubIcon = (p) => <svg {...p} viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>;
 const Code2 = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>;
 const Package = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>;
+const InstagramIcon = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>;
+const LinkedinIcon = (p) => <svg {...p} viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>;
+const PhoneIcon = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>;
+const MessageSquare = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>;
+const Send = (p) => <svg {...p} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>;
 
 /* ── TOOLS ── */
 const tools = [
@@ -135,7 +140,16 @@ function ToolCard({ tool }) {
 function ToolsSection() {
   return (
     <section id="tools" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8 sm:mb-12">My Tools</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        style={{ color: '#ffffff', fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', fontWeight: 700 }}
+        className="mb-8 sm:mb-12"
+>
+  My Tools
+</motion.h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
         {tools.map((tool) => <ToolCard key={tool.name} tool={tool} />)}
       </div>
@@ -155,10 +169,11 @@ function HeroSection() {
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 sm:mb-6"
+          style={{ fontSize: 'clamp(2.25rem, 8vw, 6rem)', fontWeight: 800 }}
+          className="leading-tight mb-4 sm:mb-6"
         >
-          <span className="text-[#AE75DA]">WEB</span>{' '}
-          <span className="text-white">DEVELOPER</span>
+          <span style={{ color: '#AE75DA' }}>WEB</span>{' '}
+          <span style={{ color: '#ffffff' }}>DEVELOPER</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -296,6 +311,124 @@ function AboutSection() {
   );
 }
 
+/* ── CONTACT ── */
+function ContactSection() {
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [comments, setComments] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name.trim() && message.trim()) {
+      setComments((prev) => [...prev, { name: name.trim(), message: message.trim() }]);
+      setName('');
+      setMessage('');
+    }
+  };
+
+  const socialLinks = [
+    { name: 'Github', icon: GithubIcon, url: 'https://github.com/Atha112', desc: 'github.com/teukuatha' },
+    { name: 'LinkedIn', icon: LinkedinIcon, url: '#', desc: 'linkedin.com/in/teukuatha' },
+    { name: 'Instagram', icon: InstagramIcon, url: '#', desc: '@teukuatha' },
+    { name: 'WhatsApp', icon: PhoneIcon, url: '#', desc: '+62 812-xxxx-xxxx' },
+  ];
+
+  return (
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        style={{ color: '#a78bfa', fontSize: 'clamp(1.875rem, 5vw, 3.75rem)', fontWeight: 800 }}
+        className="text-center mb-10 sm:mb-14"
+      >
+        Contact Me
+      </motion.h2>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}>
+          <div className="bg-[#1e1152]/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 h-full flex flex-col">
+            <h3 style={{ color: '#ffffff', fontWeight: 700, fontSize: 'clamp(1.125rem, 2vw, 1.25rem)' }} className="mb-6 sm:mb-8">Connect with me</h3>
+            <div className="flex flex-col gap-4 sm:gap-5 flex-1">
+              {socialLinks.map((social, idx) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 + idx * 0.12, duration: 0.5 }}
+                  whileHover={{ x: 5, backgroundColor: 'rgba(99, 102, 241, 0.15)' }}
+                  className="flex items-center gap-4 p-3 sm:p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#6366f1]/40 transition-all group"
+                >
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#6366f1]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#6366f1]/30 transition-colors">
+                    <social.icon className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: '#ffffff' }} />
+                  </div>
+                  <div className="min-w-0">
+                    <p style={{ color: '#ffffff', fontWeight: 500, fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }}>{social.name}</p>
+                    <p style={{ color: '#9ca3af', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }} className="truncate">{social.desc}</p>
+                  </div>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
+          <div className="bg-[#1e1152]/70 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-5 sm:mb-6">
+              <MessageSquare className="w-5 h-5" style={{ color: '#a78bfa' }} />
+              <h3 style={{ color: '#ffffff', fontWeight: 600, fontSize: 'clamp(1.125rem, 2vw, 1.25rem)' }}>Comments ({comments.length})</h3>
+            </div>
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+              <div>
+                <label style={{ color: '#d1d5db', fontSize: '0.875rem', fontWeight: 500 }} className="block mb-1.5">Name</label>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Enter your name" style={{ color: '#ffffff', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }} className="w-full bg-[#0f0b2e]/60 border border-[#6366f1]/30 rounded-xl px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1] transition-colors" />
+              </div>
+              <div>
+                <label style={{ color: '#d1d5db', fontSize: '0.875rem', fontWeight: 500 }} className="block mb-1.5">Message</label>
+                <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Write your message here" rows={3} style={{ color: '#ffffff', fontSize: 'clamp(0.875rem, 1.5vw, 1rem)' }} className="w-full bg-[#0f0b2e]/60 border border-[#6366f1]/30 rounded-xl px-4 py-3 placeholder-gray-500 focus:outline-none focus:border-[#6366f1] focus:ring-1 focus:ring-[#6366f1] transition-colors resize-none" />
+              </div>
+              <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} type="submit" className="w-full bg-[#3b82f6] hover:bg-[#2563eb] text-white font-medium py-3 px-5 rounded-xl flex items-center justify-center gap-2 transition-colors text-sm sm:text-base cursor-pointer">
+                <Send className="w-4 h-4" /> Post Comment
+              </motion.button>
+            </form>
+            {comments.length > 0 && (
+              <div className="mt-5 space-y-2 max-h-48 overflow-y-auto pr-1">
+                {comments.map((c, i) => (
+                  <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="bg-[#0f0b2e]/50 rounded-xl p-3 border border-[#6366f1]/20">
+                    <p style={{ color: '#60a5fa', fontWeight: 500, fontSize: '0.875rem' }} className="mb-1">{c.name}</p>
+                    <p style={{ color: '#d1d5db', fontSize: '0.875rem' }}>{c.message}</p>
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ── FOOTER ── */
+function Footer() {
+  return (
+    <footer className="mt-auto border-t border-white/10 py-6 px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p style={{ color: '#9ca3af', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }}>&copy; 2025 Teuku Atha Athaya Nafi. All rights reserved.</p>
+        <div className="flex items-center gap-4">
+          {['Home', 'About', 'Contact'].map((item) => (
+            <button key={item} onClick={() => document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })} style={{ color: '#9ca3af', fontSize: 'clamp(0.75rem, 1.2vw, 0.875rem)' }} className="hover:text-white transition-colors cursor-pointer">{item}</button>
+          ))}
+        </div>
+      </div>
+    </footer>
+  );
+}
+
 export default function TeukuAtha() {
   return (
     <div
@@ -311,7 +444,9 @@ export default function TeukuAtha() {
         <HeroSection />
         <ToolsSection />
         <AboutSection />
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
