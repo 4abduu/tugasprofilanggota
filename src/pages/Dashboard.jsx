@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 
 import fotoAbdu from '../abdu-foto-profil.jpg'
+import fotoAtha from '../foto-atha.jpg'
 
 const teamMembers = [
   {
@@ -9,6 +10,13 @@ const teamMembers = [
     url: "/abdu",
     image: fotoAbdu,
     color: "from-blue-500 to-cyan-500",
+  },
+  {
+    name: "Teuku Atha Athaya Nafi",
+    role: "Anggota 3",
+    url: "/teuku-atha-athaya-nafi",
+    image: fotoAtha,
+    color: "from-purple-500 to-pink-500",
   },
 ]
 

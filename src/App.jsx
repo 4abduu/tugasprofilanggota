@@ -7,7 +7,7 @@
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/abdu" element={<Abdu />} />
-        <Route path="/teuku-atha" element={<TeukuAtha />} />
+        <Route path="/teuku-atha-athaya-nafi" element={<TeukuAtha />} />
       </Routes>
     )
   }
