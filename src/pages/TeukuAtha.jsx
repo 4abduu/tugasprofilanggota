@@ -326,7 +326,7 @@ function ContactSection() {
   };
 
   const socialLinks = [
-    { name: 'Github', icon: GithubIcon, url: 'https://github.com/Atha112', desc: 'github.com/teukuatha' },
+    { name: 'Github', icon: GithubIcon, url: 'https://4abduu.github.io/tugasprofilanggota/teuku-atha-athaya-nafi', desc: 'Portfolio Website' },
     { name: 'LinkedIn', icon: LinkedinIcon, url: 'https://linkedin.com/in/teuku-atha-athaya-nafi-276505373', desc: 'linkedin.com/in/teuku-atha-athaya-nafi-276505373' },
     { name: 'Instagram', icon: InstagramIcon, url: 'https://www.instagram.com/athnfio', desc: '@athnfio' },
     { name: 'WhatsApp', icon: PhoneIcon, url: 'https://wa.me/6281385179438', desc: '+62 813-8517-9438' },
