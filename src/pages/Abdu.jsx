@@ -76,6 +76,10 @@ function Abdu() {
             <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">Domisili</p>
             <p className="text-sm text-white font-medium">Malang, Jawa Timur</p>
           </div>
+          <div className="bg-white/5 rounded-xl p-3 border border-white/5 col-span-2">
+            <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider mb-1">GitHub</p>
+            <p className="text-sm text-white font-medium"><a href="https://4abduu.github.io/tugasprofilanggota" target="_blank" rel="noopener noreferrer">https://4abduu.github.io/tugasprofilanggota</a></p>
+          </div>
         </div>
 
         {/* Divider */}
